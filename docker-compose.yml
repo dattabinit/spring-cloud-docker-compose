@@ -1,0 +1,46 @@
+version: '2.1'
+services:
+  registry:
+    environment:
+      CONFIG_SERVICE_PASSWORD: detachment
+    image: binitdatta-eureka-service-discovery
+    restart: always
+    ports:
+      - 8761:8761
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "10"
+  config:
+    environment:
+      CONFIG_SERVICE_PASSWORD: detachment
+    image: binitdatta-config-service
+    restart: always
+    ports:
+      - 8888:8888
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "10"
+  retailpoc-hellow-world-one:
+    environment:
+      CONFIG_SERVICE_PASSWORD: detachment
+    image: retailpoc-hellow-world-one
+    restart: always
+    ports:
+      - 8082:8082
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "10"
+  retailpoc-hellow-world-two:
+    environment:
+      CONFIG_SERVICE_PASSWORD: detachment
+    image: retailpoc-hellow-world-two
+    restart: always
+    ports:
+      - 8083:8083
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "10"

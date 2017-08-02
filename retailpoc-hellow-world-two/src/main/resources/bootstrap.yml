@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: retailpoc-hellow-world-two
+  cloud:
+    enabled: true
+    config:
+      uri: http://config:8888
+      failFast: true
+      retry:
+        maxAttempts: 20    

@@ -1,0 +1,19 @@
+---
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://registry:8761/eureka/
+      fetchRegistry: true
+
+####################################
+server:
+  port: 8888
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/dattabinit/binitdatta-spring-cloud-config-repository
+          searchPaths: retailpoc-hellow-world-one,retailpoc-hellow-world-two
+          username: dattabinit
+          password: password123

@@ -1,0 +1,9 @@
+---
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://registry:8761/eureka/
+      fetchRegistry: true
+      
+server:
+  port: 8083
